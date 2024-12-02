@@ -1,8 +1,8 @@
 
-Clasifikasi ikan danau toba - v4 2024-11-21 10:44am
+perbaikan dataset  - v1 2024-11-30 10:55pm
 ==============================
 
-This dataset was exported via roboflow.com on November 21, 2024 at 3:45 AM GMT
+This dataset was exported via roboflow.com on November 30, 2024 at 3:57 PM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,7 +17,7 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 4082 images.
+The dataset includes 1563 images.
 Fish are annotated in folder format.
 
 The following pre-processing was applied to each image:
@@ -25,6 +25,10 @@ The following pre-processing was applied to each image:
 * Resize to 640x640 (Stretch)
 
 The following augmentation was applied to create 3 versions of each source image:
-* Random rotation of between -14 and +14 degrees
+* 50% probability of horizontal flip
+* 50% probability of vertical flip
+* Equal probability of one of the following 90-degree rotations: none, clockwise, counter-clockwise, upside-down
+* Random rotation of between -30 and +30 degrees
+* Random shear of between -30° to +30° horizontally and -30° to +30° vertically
 
 
