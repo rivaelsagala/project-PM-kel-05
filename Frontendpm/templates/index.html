@@ -2,10 +2,7 @@
 <html lang="en">
     <head>
         <title>Project PM </title>
-        <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous"
         />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -21,11 +18,16 @@
         <header id="header" class="site-header">
           <nav class="navbar navbar-expand-lg px-lg-5">
             <div class="container-fluid py-3">
-              <a class="navbar-brand" href="#logo">
-                <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Logo">
-             
-              </a>
-              <button 
+                <div class="logo-container">
+                  <a href="#logo">
+                    <img src="{{ url_for('static', filename='images/ikanremove.png') }}" alt="logo" height="100" width="100" id="logo">
+                </a>
+                  <div class="text-container">
+                      <h1>Lake Toba</h1>     
+                  </div>
+              </div>
+              
+              <!-- <button 
               class="navbar-toggler" 
               type="button" 
               data-bs-toggle="collapse" 
@@ -34,7 +36,7 @@
               aria-expanded="false" 
               aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+              </button> -->
               <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                 <ul class="navbar-nav gap-4 text-end mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -42,11 +44,12 @@
                   </li>
                   
                   <li class="nav-item">
-                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#features">Klasifikasi</a>
+                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="{{ url_for('klasifikasi') }}">Klasifikasi</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="#about">Tentang</a>
-                  </li>
+                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="{{ url_for('about') }}">Tentang</a>
+                </li>
+                
                  
                 </ul>                    
               </div>
@@ -59,7 +62,6 @@
               <div class="row g-4 flex-row-reverse align-items-center">
                 
                   <div class="images">
-                    
                     <img alt="Image of a blue fish with white spots" class="img1" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
                     <img alt="Image of a blue fish with white spots" class="img2" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
                     <img alt="Image of a dolphin underwater" class="img3" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
@@ -73,27 +75,18 @@
                     Mujahir dan Ikan Sepat  
                   </h1>
                   <div class="d-flex align-items-center icon mt-2">
-                    <svg class="circle" width="22" height="22">
-                        <use xlink:href="#circle"></use>
-                    </svg>
                     <p class="px-2 mb-0 fw-medium">
-                        100% Effective Weight Loss
+                      ✅ 100% Effective Weight Loss
                     </p>
                   </div>
                   <div class="d-flex align-items-center icon mt-2">
-                    <svg class="circle" width="22" height="22">
-                        <use xlink:href="#circle"></use>
-                    </svg>
                     <p class="px-2 mb-0 fw-medium">
-                        No Harmful Chemicals
+                      ✅ No Harmful Chemicals
                     </p>
                   </div>
                   <div class="d-flex align-items-center icon mt-2">
-                    <svg class="circle" width="22" height="22">
-                        <use xlink:href="#circle"></use>
-                    </svg>
                     <p class="px-2 mb-0 fw-medium">
-                        Supportive Community
+                      ✅ Supportive Community
                     </p>
                   </div>
                  
@@ -106,92 +99,67 @@
             </div>
         </section>
 
-        <section id="about" class="section-padding">
-            <div class="container">
-               <div class="row align-items-center">
-                  <div class="col">
-                      <div >
-                         <img src="images/product-1.png" class="img-fluid"> 
-                      </div>
-                  </div>
-                  <div class="col text-start">
-                    <div>
-                        <h2 class="mb-4">
-                            Transform your life and embrace a healthier future
-                        </h2>
-                        <p>
-                          Pretium turpis faucibus adipiscing duis. Id quis tristique mi vitae nec. In et in praesent pellentesque orta sit porta ridiculus.
-                        </p>
-                        <p>
-                          Gravida scelerisque lacus amet a est magna. Mauris adipiscing non gravida pretium mi neque orci pulvinar. In imperdiet gravida quisque in in integer et. Urna porta rhoncus enim est in. Orci viverra erat ac blandit.
-                        </p>
-                    </div> 
-                  </div>
+        <section id="product" class="section-padding">
+          <div class="text-center">
+            <h2>
+                Produk
+            </h2>
+          </div>
+          <div class="container mt-5">
+            <div class="row">
+             <div class="col-md-4 mb-4">
+              <div class="card">
+               <img alt="Red Devil fish in an aquarium" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/k5hmDsyJ5OKwDRTvEoncZhJwXhNfpACPdQR3BWStTn5gkO7JA.jpg" width="300"/>
+               <div class="card-body text-center">
+                <h5 class="card-title">
+                 Apa itu Ikan Red Devil?
+                </h5>
+                <p class="card-text">
+                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
+                </p>
+                <a class="btn btn-outline-primary" href="#">
+                 Lihat selengkapnya
+                </a>
                </div>
+              </div>
+             </div>
+             <div class="col-md-4 mb-4">
+              <div class="card">
+               <img alt="Mujahir fish being held by a hand" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/fknCR8dayG0dcyfeEqKGv4qe1K3NwPJ7eaAc5ryMC6eHQSn9E.jpg" width="300"/>
+               <div class="card-body text-center">
+                <h5 class="card-title">
+                 Apa itu Ikan Mujahir?
+                </h5>
+                <p class="card-text">
+                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
+                </p>
+                <a class="btn btn-outline-primary" href="#">
+                 Lihat selengkapnya
+                </a>
+               </div>
+              </div>
+             </div>
+             <div class="col-md-4 mb-4">
+              <div class="card">
+               <img alt="Sepat fish in an aquarium" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/AmiK1AlnIQ6UNlABLq2Vs61nZDoTB36UfvnDWtCMOu0fId2TA.jpg" width="300"/>
+               <div class="card-body text-center">
+                <h5 class="card-title">
+                 Apa itu Ikan Sepat?
+                </h5>
+                <p class="card-text">
+                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
+                </p>
+                <a class="btn btn-outline-primary" href="#">
+                 Lihat selengkapnya
+                </a>
+               </div>
+              </div>
+             </div>
             </div>
-        </section>
+           </div>
+      </section>
 
-        <section id="features" class="bg-body-secondary py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                      <h2 class="mb-4">
-                        Benefits of Our Natural Weight Loss Product
-                      </h2>
-                      <p>
-                          Mauris adipiscing non gravida pretium mi neque orci pulvinar. In imperdiet gravida quisque in in integer et urna porta rhoncus enim est in. 
-                      </p>
-                      <ul class="ps-0">
-                        <li class="d-flex align-items-center icon mt-2">
-                            <svg class="circle" width="22" height="22">
-                                <use xlink:href="#circle"></use>
-                            </svg>
-                            <p class="px-2 mb-0 fw-medium">
-                              Our weight loss product is formulated with natural ingredients.
-                            </p>
-                        </li>
-                        <li class="d-flex align-items-center icon mt-2">
-                            <svg class="circle" width="22" height="22">
-                                <use xlink:href="#circle"></use>
-                            </svg>
-                            <p class="px-2 mb-0 fw-medium">
-                              Our product can help curb your cravings and reduce the urge to overeat.
-                            </p>
-                        </li>
-                        <li class="d-flex align-items-center icon mt-2">
-                            <svg class="circle" width="22" height="22">
-                                <use xlink:href="#circle"></use>
-                            </svg>
-                            <p class="px-2 mb-0 fw-medium">
-                              Many users experience increased energy and vitality while taking.
-                            </p>
-                        </li>
-                        <li class="d-flex align-items-center icon mt-2">
-                            <svg class="circle" width="22" height="22">
-                                <use xlink:href="#circle"></use>
-                            </svg>
-                            <p class="px-2 mb-0 fw-medium">
-                              Some ingredients support better digestion, helping your body absorb.
-                            </p>
-                        </li>
-                        <li class="d-flex align-items-center icon mt-2">
-                            <svg class="circle" width="22" height="22">
-                                <use xlink:href="#circle"></use>
-                            </svg>
-                            <p class="px-2 mb-0 fw-medium">
-                              Our product can assist in maintaining stable blood sugar levels.
-                            </p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/product-2.png" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-choose-us" class="section-padding">
+        <section id="why-choose-us" class="section-padding ">
             <div class="container mt-5">
                 <div class="text-center">
                   <h2>
@@ -257,47 +225,7 @@
             </div>
         </section>
 
-        <section id="product" class="section-padding pt-0">
-            <div class="container text-center">
-                <div class="mb-5">
-                    <h2>
-                        Weight loss Product Pricing
-                    </h2>
-                    <p>
-                        14 day Money back guaranteed
-                    </p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                       <img src="images/product-3.png" class="img-fluid">
-                       <h2 class="text-primary mt-4">
-                        $39.00
-                       </h2> 
-                       <button type="button" class="btn btn-primary btn-lg mt-3 btn-color">
-                        Order Now
-                       </button> 
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/product-4.png" class="img-fluid">
-                       <h2 class="text-primary mt-4">
-                        $66.00
-                       </h2> 
-                       <button type="button" class="btn btn-primary btn-lg mt-3 btn-color">
-                        Order Now
-                       </button> 
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/product-4.png" class="img-fluid">
-                       <h2 class="text-primary mt-4">
-                        $90.00
-                       </h2> 
-                       <button type="button" class="btn btn-primary btn-lg mt-3 btn-color">
-                        Order Now
-                       </button> 
-                    </div>
-                </div>                
-            </div>
-        </section>
+       
 
         <section id="reviews" class="bg-body-secondary section-padding">
             <div class="container">
