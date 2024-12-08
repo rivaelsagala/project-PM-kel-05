@@ -9,7 +9,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 app.secret_key = 'your_secret_key'
 
 # Load CNN model
-MODEL_PATH = '../../model/my_model.keras'  # Ganti dengan path ke model Anda
+MODEL_PATH = '../../model/model_ANN_tanh_object.keras' 
 model = load_model(MODEL_PATH)
 
 # Define label classes
@@ -17,7 +17,7 @@ LABELS = ['Mujahir', 'Red Devil', 'Sepat']
 
 # Helper function for image preprocessing
 def preprocess_image(img_path):
-    img = image.load_img(img_path, target_size=(100, 150))  # Sesuaikan IMG_SIZE
+    img = image.load_img(img_path, target_size=(224, 224))  
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
