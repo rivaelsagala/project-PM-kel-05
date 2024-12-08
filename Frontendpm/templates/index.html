@@ -1,33 +1,36 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Project PM </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-        crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+  <title>Project PM </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-      
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <body class="bg-white" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
-    
-        <header id="header" class="site-header">
-          <nav class="navbar navbar-expand-lg px-lg-5">
-            <div class="container-fluid py-3">
-                <div class="logo-container">
-                  <a href="#logo">
-                    <img src="{{ url_for('static', filename='images/ikanremove.png') }}" alt="logo" height="100" width="100" id="logo">
-                </a>
-                  <div class="text-container">
-                      <h1>Lake Toba</h1>     
-                  </div>
-              </div>
-              
-              <!-- <button 
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-white" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%"
+  data-bs-smooth-scroll="true" tabindex="0">
+
+  <header id="header" class="site-header">
+    <nav class="navbar navbar-expand-lg px-lg-5">
+      <div class="container-fluid py-3">
+        <div class="logo-container">
+          <a href="#logo">
+            <img src="{{ url_for('static', filename='images/ikanremove.png') }}" alt="logo" height="100" width="100"
+              id="logo">
+          </a>
+          <div class="text-container">
+            <h1>Lake Toba</h1>
+          </div>
+        </div>
+
+        <!-- <button 
               class="navbar-toggler" 
               type="button" 
               data-bs-toggle="collapse" 
@@ -37,521 +40,548 @@
               aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button> -->
-              <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-                <ul class="navbar-nav gap-4 text-end mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active text-uppercase fw-medium" aria-current="page" href="#home">Home</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="{{ url_for('klasifikasi') }}">Klasifikasi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase fw-medium" aria-current="page" href="{{ url_for('about') }}">Tentang</a>
-                </li>
-                
-                 
-                </ul>                    
-              </div>
-            </div>
-          </nav>
-        </header>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+          <ul class="navbar-nav gap-4 text-end mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-uppercase fw-medium" aria-current="page" href="#home">Home</a>
+            </li>
 
-        <section id="home" class="warna -subtle section-padding pb-5 pb-md-0">
-            <div class="container">
-              <div class="row g-4 flex-row-reverse align-items-center">
-                
-                  <div class="images">
-                    <img alt="Image of a blue fish with white spots" class="img1" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
-                    <img alt="Image of a blue fish with white spots" class="img2" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
-                    <img alt="Image of a dolphin underwater" class="img3" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg"  width="150"/>
-                    <img alt="Image of a colorful fish with blue and orange patterns" class="img4" height="150" src="https://storage.googleapis.com/a1aa/image/ZhYNmmrJfXycZiHZcCnDTBcl8N6OvsaG2ZjsY1cpUvWbi65JA.jpg" width="150"/>
-                    <img alt="Image of two orange and white striped fish" class="img5" height="150" src="https://storage.googleapis.com/a1aa/image/czfLTszR0d2VbKoCyClCzCSo4Lrq60Fo23S9uvg3b9WZi65JA.jpg" width="150"/>
-                   </div>
-               
-                <div class="col-md-6">
-                  <h1 class="klasifikasi mb-4">
-                    Klasifikasi Ikan Red devil, Ikan 
-                    Mujahir dan Ikan Sepat  
-                  </h1>
-                  <div class="d-flex align-items-center icon mt-2">
-                    <p class="px-2 mb-0 fw-medium">
-                      ✅ 100% Effective Weight Loss
-                    </p>
-                  </div>
-                  <div class="d-flex align-items-center icon mt-2">
-                    <p class="px-2 mb-0 fw-medium">
-                      ✅ No Harmful Chemicals
-                    </p>
-                  </div>
-                  <div class="d-flex align-items-center icon mt-2">
-                    <p class="px-2 mb-0 fw-medium">
-                      ✅ Supportive Community
-                    </p>
-                  </div>
-                 
-                  <button type="button" class="btn-white">
-                   Coba sekarang 
-                  </button>    
-                            
-                </div>
-              </div>
-            </div>
-        </section>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-medium" aria-current="page"
+                href="{{ url_for('klasifikasi') }}">Klasifikasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase fw-medium" aria-current="page" href="{{ url_for('about') }}">Tentang</a>
+            </li>
 
-        <section id="product" class="section-padding">
-          <div class="text-center">
-            <h2>
-                Produk
-            </h2>
-          </div>
-          <div class="container mt-5">
-            <div class="row">
-             <div class="col-md-4 mb-4">
-              <div class="card">
-               <img alt="Red Devil fish in an aquarium" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/k5hmDsyJ5OKwDRTvEoncZhJwXhNfpACPdQR3BWStTn5gkO7JA.jpg" width="300"/>
-               <div class="card-body text-center">
-                <h5 class="card-title">
-                 Apa itu Ikan Red Devil?
-                </h5>
-                <p class="card-text">
-                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
-                </p>
-                <a class="btn btn-outline-primary" href="#">
-                 Lihat selengkapnya
-                </a>
-               </div>
-              </div>
-             </div>
-             <div class="col-md-4 mb-4">
-              <div class="card">
-               <img alt="Mujahir fish being held by a hand" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/fknCR8dayG0dcyfeEqKGv4qe1K3NwPJ7eaAc5ryMC6eHQSn9E.jpg" width="300"/>
-               <div class="card-body text-center">
-                <h5 class="card-title">
-                 Apa itu Ikan Mujahir?
-                </h5>
-                <p class="card-text">
-                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
-                </p>
-                <a class="btn btn-outline-primary" href="#">
-                 Lihat selengkapnya
-                </a>
-               </div>
-              </div>
-             </div>
-             <div class="col-md-4 mb-4">
-              <div class="card">
-               <img alt="Sepat fish in an aquarium" class="card-img-top" height="200" src="https://storage.googleapis.com/a1aa/image/AmiK1AlnIQ6UNlABLq2Vs61nZDoTB36UfvnDWtCMOu0fId2TA.jpg" width="300"/>
-               <div class="card-body text-center">
-                <h5 class="card-title">
-                 Apa itu Ikan Sepat?
-                </h5>
-                <p class="card-text">
-                 lorem ipsum dolor sit amet consectetur adipiscing lorem ipsum dolor sit amet consectetur adipiscing
-                </p>
-                <a class="btn btn-outline-primary" href="#">
-                 Lihat selengkapnya
-                </a>
-               </div>
-              </div>
-             </div>
-            </div>
-           </div>
-      </section>
 
-        <section id="why-choose-us" class="section-padding ">
-            <div class="container mt-5">
-                <div class="text-center">
-                  <h2>
-                      Why to choose our product?
-                  </h2>
-                </div>
-                <div class="row g-4 text-center py-4 mt-4">
-                    <div class="col-md-4">
-                      <img src="images/icon-1.png" class="img-fluid">
-                      <h4 class="mt-4">
-                        Trusted and Proven
-                      </h4>
-                      <p>
-                        Our product has a track record of success and is trusted by many who have achieved their weight loss goals and experienced improved health.
-                      </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/icon-2.png" class="img-fluid">
-                        <h4 class="mt-4">
-                            Personalized Solutions
-                        </h4>
-                        <p>
-                            Our product comes in various forms and formulations to cater to different preferences and individual needs, ensuring a tailored approach.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/icon-3.png" class="img-fluid">
-                        <h4 class="mt-4">
-                            Comprehensive Approach
-                        </h4>
-                        <p>
-                            Our product takes a holistic approach to health, considering factors like stress, emotional eating, and overall wellness, providing a well-rounded.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                      <img src="images/icon-4.png" class="img-fluid">
-                      <h4 class="mt-4">
-                        Sustainability and Eco-Friendly
-                      </h4>
-                      <p>
-                        We are committed to sustainable practices, both in our product formulation and packaging, reducing our environmental impact.
-                      </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/icon-5.png" class="img-fluid">
-                        <h4 class="mt-4">
-                          Overall Health Benefits
-                        </h4>
-                        <p>
-                          Taking our natural weight loss product can contribute to your overall well-being, potentially reducing the risk of chronic diseases associated.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="images/icon-6.png" class="img-fluid">
-                        <h4 class="mt-4">
-                          Inflammation Reduction
-                        </h4>
-                        <p>
-                          Certain ingredients have anti-inflammatory properties, potentially reducing inflammation-related health issues.
-                        </p>
-                    </div>
-                </div>        
-            </div>
-        </section>
-
-       
-
-        <section id="reviews" class="bg-body-secondary section-padding">
-            <div class="container">
-                <div class="text-center mb-5">
-                  <h2>
-                      Customer's Reviews
-                  </h2>
-                </div>
-                <div class="swiper testimonial-swiper">
-                  <div class="swiper-wrapper">
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>        
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>        
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>        
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>        
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>  
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>  
-                      <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
-                        <div class="text-center">
-                          <h4>
-                            Kevin H.
-                          </h4>
-                          <h6 class="mb-3">
-                            8/20/2023
-                          </h6>
-                          <p class="fs-5">
-                            “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros dapibus pulvinar.”
-                          </p>
-                          <div class="review-icon">
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                            <svg class="star text-warning" width="20" height="20">
-                              <use xlink:href="#star"></use>
-                            </svg>
-                          </div>
-                        </div>    
-                      </div>  
-                  </div>
-                </div>
-                <div class="testimonial-swiper-pagination position-relative mt-5 text-center"></div>
-            </div>
-        </section>
-
-        <section id="gallery" class="section-padding">
-          <div class="container">
-              <div class="text-center mb-5">
-              <h2>
-                Our gallery
-              </h2>
-              </div>
-              <div class="swiper gallery-swiper"> 
-                <div class="swiper-wrapper">
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery1.jpg" class="img-fluid rounded-3">
-                    </div>
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery2.jpg" class="img-fluid rounded-3">
-                    </div>
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery3.jpg" class="img-fluid rounded-3">
-                    </div>
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery4.jpg" class="img-fluid rounded-3">
-                    </div>
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery2.jpg" class="img-fluid rounded-3">
-                    </div>
-                    <div class="gallery-image py-2 px-1 swiper-slide">
-                      <img src="images/gallery1.jpg" class="img-fluid rounded-3">
-                    </div>
-                </div>
-              </div>
-              <div class="gallery-swiper-pagination position-relative mt-5 text-center"></div>
-          </div>
-        </section>
-
-        <footer id="footer" class="section-padding bg-primary-subtle">
-          <div class="container align-items-center">
-            <div class="row">
-              <div class="col-md-6 offset-md-3 text-center">
-                <h2 class="mb-3">
-                    Ready to Take Step Towards a Healthier You?
-                </h2>
-                <p>
-                    Transform your life, achieve your weight loss goals, and embrace a happier, healthier version of yourself. Don't wait any longer your journey to a better you starts today!
-                </p>
-                <button type="button" class="btn btn-primary btn-lg mt-4">
-                    Order Now
-                </button>
-              </div>
-            </div>
+          </ul>
         </div>
-        </footer>
-        <hr class="m-0">
-        <div class="footer-bottom container-fluid text-center bg-primary-subtle">
-          <div class="copyright py-4">
-            <p class="mb-0">© Copyright 2024 WeightLoss. HTML Template by <a href="https://templatesjungle.com/" target="_blank">TemplatesJungle</a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="warna -subtle section-padding pb-5 pb-md-0">
+    <div class="container">
+      <div class="row g-4 flex-row-reverse align-items-center">
+
+        <div class="images">
+          <img alt="Image of a blue fish with white spots" class="img1" src="../static/images/imges.png"
+            style="height: 400px;width: 400px;" />
+        </div>
+
+        <div class="col-md-6">
+          <h1 class="klasifikasi mb-4">
+            Klasifikasi Ikan Red devil, Ikan
+            Mujahir dan Ikan Sepat
+          </h1>
+          <div class="d-flex align-items-center icon mt-2">
+            <p class="px-2 mb-0 fw-medium">
+              ✅ 100% Effective Weight Loss
             </p>
           </div>
+          <div class="d-flex align-items-center icon mt-2">
+            <p class="px-2 mb-0 fw-medium">
+              ✅ No Harmful Chemicals
+            </p>
+          </div>
+          <div class="d-flex align-items-center icon mt-2">
+            <p class="px-2 mb-0 fw-medium">
+              ✅ Supportive Community
+            </p>
+          </div>
+
+          <button type="button" class="btn-white">
+            Coba sekarang
+          </button>
+
         </div>
-        
-        <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    </body>
+      </div>
+    </div>
+  </section>
+
+  <section id="product" class="section-padding">
+    <div class="text-center">
+      <h2>
+        Ikan Danau Toba
+      </h2>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img alt="Red Devil fish in an aquarium" class="card-img-top"
+              src="../static/images/Red-Devil-246_jpg.rf.642cba46a26d0b230c13108d9d53a600.jpg"
+              style="height: 400px;width: 400px;" />
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                Apa itu Ikan Red Devil?
+              </h5>
+              <p class="card-text">
+                Ikan Red Devil merupakan salah satu spesies ikan cichlid yang terkenal dengan warna cerah dan bentuk
+                tubuhnya yang unik. Dinamakan "Red Devil" karena warna tubuhnya yang biasanya merah atau oranye
+                mencolok. Ikan ini berasal dari Amerika Tengah, tetapi kini banyak ditemukan di perairan seperti Danau
+                Toba. Red Devil dikenal agresif, terutama saat melindungi wilayahnya, sehingga sering mendominasi
+                ekosistem tempatnya berada
+              </p>
+              <a class="btn btn-outline-primary" href="#">
+                Lihat selengkapnya
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img alt="Mujahir fish being held by a hand" class="card-img-top" src="../static/images/6n (32).jpg"
+              style="height: 400px;width: 400px;" />
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                Apa itu Ikan Mujahir?
+              </h5>
+              <p class="card-text">
+                Ikan Mujahir adalah jenis ikan air tawar yang umum ditemukan di Indonesia, termasuk di Danau Toba. Ikan
+                ini dikenal sebagai spesies yang adaptif, mampu hidup di berbagai kondisi perairan. Mujahir sering
+                dimanfaatkan sebagai sumber pangan karena pertumbuhannya yang cepat dan rasanya yang lezat. Ikan ini
+                biasanya memiliki tubuh pipih dengan warna abu-abu kehitaman.
+              </p>
+              <a class="btn btn-outline-primary" href="#">
+                Lihat selengkapnya
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img alt="Sepat fish in an aquarium" class="card-img-top"
+              src="../static/images/Sepat-81_png_jpg.rf.c224236203490e01a7e81f4cdcadc5ca.jpg"
+              style="height: 400px;width: 400px;" />
+            <div class="card-body text-center">
+              <h5 class="card-title">
+                Apa itu Ikan Sepat?
+              </h5>
+              <p class="card-text">
+                Ikan Sepat merupakan ikan air tawar dari keluarga Gourami yang berukuran kecil hingga sedang. Sepat
+                sering ditemukan di perairan dangkal seperti rawa-rawa, sungai, hingga danau seperti Danau Toba. Ikan
+                ini dikenal karena kemampuan mereka menghirup oksigen langsung dari udara melalui organ labirin, membuat
+                mereka tahan di lingkungan dengan oksigen rendah. Ikan Sepat juga memiliki nilai ekonomis sebagai ikan
+                konsumsi dan peliharaan.
+              </p>
+              <a class="btn btn-outline-primary" href="#">
+                Lihat selengkapnya
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose-us" class="section-padding ">
+    <div class="container mt-5">
+      <div class="text-center">
+        <h2>
+          Why to choose our product?
+        </h2>
+      </div>
+      <div class="row g-4 text-center py-4 mt-4">
+        <div class="col-md-4">
+          <img src="images/icon-1.png" class="img-fluid">
+          <h4 class="mt-4">
+            Trusted and Proven
+          </h4>
+          <p>
+            Our product has a track record of success and is trusted by many who have achieved their weight loss goals
+            and experienced improved health.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-2.png" class="img-fluid">
+          <h4 class="mt-4">
+            Personalized Solutions
+          </h4>
+          <p>
+            Our product comes in various forms and formulations to cater to different preferences and individual needs,
+            ensuring a tailored approach.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-3.png" class="img-fluid">
+          <h4 class="mt-4">
+            Comprehensive Approach
+          </h4>
+          <p>
+            Our product takes a holistic approach to health, considering factors like stress, emotional eating, and
+            overall wellness, providing a well-rounded.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-4.png" class="img-fluid">
+          <h4 class="mt-4">
+            Sustainability and Eco-Friendly
+          </h4>
+          <p>
+            We are committed to sustainable practices, both in our product formulation and packaging, reducing our
+            environmental impact.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-5.png" class="img-fluid">
+          <h4 class="mt-4">
+            Overall Health Benefits
+          </h4>
+          <p>
+            Taking our natural weight loss product can contribute to your overall well-being, potentially reducing the
+            risk of chronic diseases associated.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-6.png" class="img-fluid">
+          <h4 class="mt-4">
+            Inflammation Reduction
+          </h4>
+          <p>
+            Certain ingredients have anti-inflammatory properties, potentially reducing inflammation-related health
+            issues.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="reviews" class="bg-body-secondary section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>
+          Customer's Reviews
+        </h2>
+      </div>
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card border rounded-3 py-5 px-3 swiper-slide">
+            <div class="text-center">
+              <h4>
+                Kevin H.
+              </h4>
+              <h6 class="mb-3">
+                8/20/2023
+              </h6>
+              <p class="fs-5">
+                “Malesuada et ut vitae eget. Leo viverra fringilla faucibus proin lacinia ornare amet. Aliquam mi eros
+                dapibus pulvinar.”
+              </p>
+              <div class="review-icon">
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+                <svg class="star text-warning" width="20" height="20">
+                  <use xlink:href="#star"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-swiper-pagination position-relative mt-5 text-center"></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>
+          Our gallery
+        </h2>
+      </div>
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery1.jpg" class="img-fluid rounded-3">
+          </div>
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery2.jpg" class="img-fluid rounded-3">
+          </div>
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery3.jpg" class="img-fluid rounded-3">
+          </div>
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery4.jpg" class="img-fluid rounded-3">
+          </div>
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery2.jpg" class="img-fluid rounded-3">
+          </div>
+          <div class="gallery-image py-2 px-1 swiper-slide">
+            <img src="images/gallery1.jpg" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+      <div class="gallery-swiper-pagination position-relative mt-5 text-center"></div>
+    </div>
+  </section>
+
+  <footer id="footer" class="section-padding bg-primary-subtle">
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center">
+          <h2 class="mb-3">
+            Ready to Take Step Towards a Healthier You?
+          </h2>
+          <p>
+            Transform your life, achieve your weight loss goals, and embrace a happier, healthier version of yourself.
+            Don't wait any longer your journey to a better you starts today!
+          </p>
+          <button type="button" class="btn btn-primary btn-lg mt-4">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <hr class="m-0">
+  <div class="footer-bottom container-fluid text-center bg-primary-subtle">
+    <div class="copyright py-4">
+      <p class="mb-0">© Copyright 2024 WeightLoss. HTML Template by <a href="https://templatesjungle.com/"
+          target="_blank">TemplatesJungle</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
 </html>
