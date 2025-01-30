@@ -135,14 +135,24 @@ def klasifikasi():
             model = load_model(MODEL_CONFIGS[selected_model]['path'])
             img = preprocess_image(img_path)
             predictions = model.predict(img)
-            class_index = np.argmax(predictions[0])
-            accuracy = float(predictions[0][class_index] * 100)
-
+            
+            # Get all class probabilities
+            class_probabilities = []
+            for i, prob in enumerate(predictions[0]):
+                class_probabilities.append({
+                    "label": MODEL_CONFIGS[selected_model]['labels'][i],
+                    "probability": round(float(prob * 100), 2)
+                })
+            
+            # Sort probabilities to find the highest
+            class_probabilities.sort(key=lambda x: x["probability"], reverse=True)
+            
             result = {
-                "jenis_ikan": MODEL_CONFIGS[selected_model]['labels'][class_index],
-                "akurasi": round(accuracy, 2),
+                "jenis_ikan": class_probabilities[0]["label"],
+                "akurasi": class_probabilities[0]["probability"],
                 "image_filename": filename,
-                "model_name": MODEL_CONFIGS[selected_model]['name']
+                "model_name": MODEL_CONFIGS[selected_model]['name'],
+                "all_probabilities": class_probabilities
             }
             return render_template("klasifikasi.html", result=result, models=MODEL_CONFIGS)
 

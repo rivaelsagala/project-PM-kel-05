@@ -130,6 +130,10 @@
                             <a class="nav-link text-uppercase fw-medium" aria-current="page"
                                 href="{{ url_for('klasifikasi') }}">Klasifikasi</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase fw-medium" aria-current="page"
+                                href="{{ url_for('about') }}">Tentang</a>
+                        </li>
 
 
                     </ul>
@@ -203,6 +207,19 @@
                             <p>Model: <strong>{{ result.model_name }}</strong></p>
                             <p>Jenis Ikan: <strong>{{ result.jenis_ikan }}</strong></p>
                             <p>Akurasi: <strong>{{ result.akurasi }}%</strong></p>
+
+                            <!-- Tambahkan bagian ini untuk menampilkan semua probabilitas -->
+                            <div class="all-probabilities mt-3">
+                                <h5>Persentase untuk Setiap Kelas:</h5>
+                                <ul class="list-unstyled">
+                                    {% for prob in result.all_probabilities %}
+                                    <li {% if prob.probability==result.akurasi %}class="fw-bold" {% endif %}>
+                                        {{ prob.label }}: {{ prob.probability }}%
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
                             <img src="{{ url_for('static', filename='images/' + result.image_filename) }}"
                                 alt="Gambar Klasifikasi" class="img-fluid mt-3" style="height: 420px; width: 420px;">
                         </div>
